@@ -42,6 +42,17 @@
     composer = "J. S. Bach"
     }
 
+startUnremovableSection = \set Staff.keepAliveInterfaces =
+     #'(rhythmic-grob-interface
+     rest-interface
+     lyric-interface
+     percent-repeat-item-interface
+     percent-repeat-interface
+     stanza-number-interface)
+
+endUnremovableSection = \unset Staff.keepAliveInterfaces
+
+
 \layout {
   indent = #0
     \context { \Score
@@ -59,8 +70,10 @@ PartPOneVoiceOne =  \relative b' {
     b2 c4 | % 15
     d2 b4 | % 16
     a8 ( [ b16  c16 )] b4 (a4  ) | % 17
+    \startUnremovableSection
     g2 r4 | % 18
     R2.*6 | % 24
+    \endUnremovableSection
     \mark \markup {\box A}
     b2 c4 | % 25
     d2 d4 | % 26
@@ -71,7 +84,9 @@ PartPOneVoiceOne =  \relative b' {
     d2 b4 | % 31
     a8 ( [ b16  c16) ] b4 ( a4 ) | % 32
     g2 r4 | % 33
+    \startUnremovableSection
     R2.*7 | \barNumberCheck #40
+    \endUnremovableSection
     \mark \markup {\box B}
     a2 b4 | % 41
     c2 c4 | % 42
@@ -114,8 +129,10 @@ PartPTwoVoiceOne =  \relative g' {
     g2 g4 | % 15
     g4 ( d4 ) e4 | % 16
     e4 fis8 ( [ e8  ] fis4 ) | % 17
+    \startUnremovableSection
     d2 r4 | % 18
     R2.*6 | % 24
+    \endUnremovableSection
     g2 g4 | % 25
     a4 ( g4 ) fis4 | % 26
     g4 d2 | % 27
@@ -125,7 +142,9 @@ PartPTwoVoiceOne =  \relative g' {
     g4 ( d4 ) e4 | % 31
     e4 fis8 [ ( e8  ] fis4 ) | % 32
     d2 r4 | % 33
+    \startUnremovableSection
     R2.*7 | \barNumberCheck #40
+    \endUnremovableSection
     fis2 gis4 | % 41
     a2 a4 | % 42
     a2 gis4 | % 43
@@ -168,7 +187,9 @@ PartPThreeVoiceOne =  \relative d' {
     d4 ( b4 ) b4 | % 16
     c8 ( [ a8 ) ] d8 ( [ b8 ] c4 )| % 17
     b2 r4 | % 18
+    \startUnremovableSection
     R2.*6 | % 24
+    \endUnremovableSection
     d2 e4 | % 25
     a,2 b4 | % 26
     \shape #'((0 . -0.4) (0.5 . 0) (0.5 . 0) (0 . -0.2)) Slur
@@ -179,7 +200,9 @@ PartPThreeVoiceOne =  \relative d' {
     d4 ( b4 ) b4 | % 31
     c8 ( [ a8 ) ] d8 ( [ b8  ] c4 )| % 32
     b2 r4 | % 33
+    \startUnremovableSection
     R2.*7 | \barNumberCheck #40
+    \endUnremovableSection
     d2 d4 | % 41
     e2 f4 | % 42
     f4 ( d4 ) e4 | % 43
@@ -221,7 +244,9 @@ PartPFourVoiceOne =  \relative g {
     b'4 ( b,4 ) e4 | % 16
     c4 d2 | % 17
     g,2 r4 | % 18
+    \startUnremovableSection
     R2.*6 | % 24
+    \endUnremovableSection
     g'4 ( fis4 ) e4 | % 25
     fis4 ( e4 ) d4 | % 26
     e4 ( fis4 ) g4 | % 27
@@ -232,7 +257,9 @@ PartPFourVoiceOne =  \relative g {
     b'4 ( b,4 ) e4 | % 31
     c4 ( d4 ) d4 | % 32
     g,2 r4 | % 33
+    \startUnremovableSection
     R2.*7 | \barNumberCheck #40
+    \endUnremovableSection
     \shape #'((0 . 0) (0 . 0.3) (0 . 0.3) (0 . 0.3)) Slur
     d'4 ( c4 ) b4 | % 41
     \shape #'((0 . 0.8) (0.5 . 1.7) (0.5 . 0.3) (0 . 0.1)) Slur
@@ -808,6 +835,7 @@ PartPFiveVoiceTwo =  \relative c' {
     \times 2/3  {
         c8 [ e8 d8 ] }
     | % 18
+    \override VerticalAxisGroup #'remove-empty = ##f
     \times 2/3  {
         d8 [ g8 fis8 ] }
     \times 2/3  {
