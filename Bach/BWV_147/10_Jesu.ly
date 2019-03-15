@@ -5,7 +5,7 @@
 % Licensed under the CPDL license as detailed at http://www0.cpdl.org/wiki/index.php/ChoralWiki:CPDL
 
 
-%\pointAndClickOff
+\pointAndClickOff
 
 \paper {
   %annotate-spacing = ##t
@@ -111,6 +111,7 @@ PartPOneVoiceOne =  \relative b' {
   \shape #'((0 . 0) (0 . 0.3) (0 . 0.3) (0 . 0)) Slur
   a8 ( [ b16  c16 )] a2 | \barNumberCheck #60
   g2. | % 61
+  \break
   R2.*11 \bar "|."
 }
 
@@ -945,6 +946,7 @@ PartPFiveVoiceTwo =  \relative c' {
     d,8 [ fis8 a8 ] }
   \times 2/3  {
     c8 [ b8 a8 ] }
+  \break
   | % 36
   \times 2/3  {
     b8 [ g8 a8 ] }
@@ -973,6 +975,7 @@ PartPFiveVoiceTwo =  \relative c' {
     g8 [ d8 b8 ] }
   \times 2/3  {
     g8 [ b8 cis8 ] }
+  \break
   | \barNumberCheck #40
   \times 2/3  {
     d8 [ d,8 e8 ] }
@@ -1307,7 +1310,6 @@ PartPSixVoiceOne =  \relative g, {
     \new StaffGroup \with { 
       \RemoveEmptyStaves 
       \override VerticalAxisGroup.remove-first = ##t
-      \override StaffSymbol.staff-space = #0.8
     }%\with { \override SpanBar #'transparent = ##t }
     <<
       \new Staff <<
@@ -1344,8 +1346,12 @@ PartPSixVoiceOne =  \relative g, {
       >>
       
     >>
-    \new StaffGroup \with { systemStartDelimiter =
-                            #'SystemStartBrace } 
+    \new StaffGroup \with { 
+      systemStartDelimiter = #'SystemStartBrace
+      \override StaffSymbol.staff-space = #0.8
+      \override NoteHead.font-size = #-1
+    
+    } 
     <<
       \new Staff <<
         \context Staff << 
