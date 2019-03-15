@@ -5,7 +5,7 @@
 % Licensed under the CPDL license as detailed at http://www0.cpdl.org/wiki/index.php/ChoralWiki:CPDL
 
 
-\pointAndClickOff
+%\pointAndClickOff
 
 \paper {
   %annotate-spacing = ##t
@@ -32,6 +32,8 @@
   right-margin = 1.49\cm
   between-system-space = 0.0\cm
   page-top-space = 0.96\cm
+  
+  system-separator-markup = \markup { \fill-line { \slashSeparator \slashSeparator } } 
 }
 
 \header {
