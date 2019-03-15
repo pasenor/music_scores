@@ -5,7 +5,7 @@
 % Licensed under the CPDL license as detailed at http://www0.cpdl.org/wiki/index.php/ChoralWiki:CPDL
 
 
-\pointAndClickOff
+%\pointAndClickOff
 
 \paper {
   %annotate-spacing = ##t
@@ -54,6 +54,13 @@ startUnremovableSection = \set Staff.keepAliveInterfaces =
 
 endUnremovableSection = \unset Staff.keepAliveInterfaces
 
+staffSize = #(define-music-function (parser location new-size) (number?)
+
+  #{
+    \set fontSize = #new-size
+    \override StaffSymbol.staff-space = #(magstep new-size)
+    \override StaffSymbol.thickness = #(magstep new-size)
+  #})
 
 \layout {
   indent = #0
@@ -1310,6 +1317,10 @@ PartPSixVoiceOne =  \relative g, {
     \new StaffGroup \with { 
       \RemoveEmptyStaves 
       \override VerticalAxisGroup.remove-first = ##t
+      fontSize = #-1
+      \override StaffSymbol.staff-space = #(magstep -1)
+      \override StaffSymbol.thickness = #(magstep -1)    
+
     }%\with { \override SpanBar #'transparent = ##t }
     <<
       \new Staff <<
@@ -1348,9 +1359,6 @@ PartPSixVoiceOne =  \relative g, {
     >>
     \new StaffGroup \with { 
       systemStartDelimiter = #'SystemStartBrace
-      \override StaffSymbol.staff-space = #0.8
-      \override NoteHead.font-size = #-1
-    
     } 
     <<
       \new Staff <<
