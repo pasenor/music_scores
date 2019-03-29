@@ -31,7 +31,7 @@
 }
 
 \header {
-  title = "19. Da unten im Tale"
+  title = "5. Da unten im Tale"
   opus = "12 Deutsche Volkslieder, WoO 35"
   composer = "J. Brahms"
 }
@@ -39,6 +39,7 @@
 SopranoMusic = \relative c' {
   \autoBeamOff
   \clef "treble" \key e \major  \time 3/4
+  \tempo "Sanft bewegt"
   % 1.
   \partial 4
   e8[(^\p fis]) |
@@ -84,7 +85,7 @@ SopranoMusic = \relative c' {
   a4( gis8) r8 gis gis |
   \break
   gis4 fis8 r r fis |
-  fis4 e8 r r r |
+  fis8. e16 e8 r r r |
   a4.^\> dis,8 \! dis4 |
   e r \bar "|."
   
@@ -132,7 +133,7 @@ AltoMusic = \relative c' {
   gis4. fis8 fis4 |
   fis4( e8) r gis gis |
   gis4 fis8 r r fis |
-  fis4 e8 r r r |
+  fis8. e16 e8 r r r |
   dis4.^\> dis8\! b4 |
   b4 r \bar "|."
 }
@@ -179,7 +180,7 @@ TenorMusic = \relative c' {
   b4. dis8 dis4  |
   dis( e8) r8 e e |
   cis4 cis8 r r dis |
-  b4 b8 r r r |
+  b8. b16 b8 r r r |
   cis4.^\> b8\! a4 |
   gis 4 r \bar  "|."
 }
@@ -225,7 +226,7 @@ BassMusic = \relative c {
   dis4. b8 b4 |
   cis4. r8 cis'8 cis |
   a4 a8 r r b8 |
-  gis4 gis8 r r r |
+  gis8. gis16 gis8 r r r |
   fis4.^\> b,8\! b4 |
   e4 r  \bar "|."
 }
