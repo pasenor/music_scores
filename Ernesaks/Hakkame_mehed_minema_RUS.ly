@@ -1,6 +1,6 @@
 \version "2.21.0"
 
-\pointAndClickOn
+\pointAndClickOff
 
 breakFourStaves = ""
 noBreakTwoStaves = \noBreak
@@ -15,12 +15,13 @@ noBreakTwoStaves = \noBreak
 
   paper-width = 20.99\cm
   paper-height = 29.7\cm
-  %  top-margin = 1.49\cm
+  top-margin = 1\cm
   %  bottom-margin = 1.0\cm
-  %  left-margin = 1.49\cm
+  left-margin = 1.5\cm
   %  right-margin = 1.49\cm
   between-system-space = 2.0\cm
   page-top-space = 0.96\cm
+  systems-per-page = 6
 }
 
 \header {
@@ -251,6 +252,7 @@ bassText = \lyricmode {
     \override StaffSymbol.staff-space = #(magstep -1.5)
     \override Hairpin.to-barline = ##f
     \override Hairpin.height = #0.5
+    \override Stem.length = #5.5
   }
   <<
     \new Staff
