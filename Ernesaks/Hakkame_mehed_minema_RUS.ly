@@ -7,6 +7,14 @@ noBreakTwoStaves = \noBreak
 
 
 \paper {
+  
+    #(define fonts
+     (set-global-fonts
+      #:music "lilyboulez"
+      #:roman "DejaVu Serif Condensed"
+      #:factor (/ staff-height pt 20)
+      ))
+
   %annotate-spacing = ##t
   oddHeaderMarkup = \markup ""
   evenHeaderMarkup = \markup ""
@@ -246,7 +254,7 @@ bassText = \lyricmode {
 }
 
 \score {
-  \new StaffGroup \with {
+\new StaffGroup \with {
     \override Score.SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/4)
     fontSize = #-1.5
     \override StaffSymbol.staff-space = #(magstep -1.5)
@@ -299,4 +307,7 @@ bassText = \lyricmode {
 
 \layout {
   indent = #0
+   %\override Score.BarNumber.break-visibility = ##(#t #t #f)
+   %\set Score.barNumberVisibility = #(every-nth-bar-number-visible 4)
+
 }
