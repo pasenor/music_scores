@@ -11,6 +11,7 @@
   ragged-last-bottom=##f
   page-limit-inter-system-space = ##t
   page-limit-inter-system-space-factor = 1.3
+  print-page-number = ##f
   %systems-per-page = 3
 }
 \header {
