@@ -1,6 +1,6 @@
 \version "2.21.0"
 
-\pointAndClickOff
+\pointAndClickOn
 
 breakFourStaves = ""
 noBreakTwoStaves = \noBreak

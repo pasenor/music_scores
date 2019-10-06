@@ -1,6 +1,8 @@
 piuFMarkup = \markup { \halign #1.4 \italic "poco piu" \dynamic "f" }
 menoFMarkup = \markup { \halign #1.4 \italic "sub. meno" \dynamic "f" }
 noAccentMarkup = \markup {\italic "no accent"}
+red = \override NoteHead.color = #red
+black = \override NoteHead.color = #black
 
 
 
@@ -69,7 +71,7 @@ SopranoMusic = \relative c'' {
   \time 4/8
   cis cis cis cis b8 gis |
   \time 3/8
-  fis4 a8 \breathe |
+  fis4 \breathe a8 
   \time 5/16
   a16 a a a a |
   \time 6/16
@@ -138,15 +140,15 @@ SopranoMusic = \relative c'' {
   a a a a a a |
   \time 7/16
   a-_ a a a a a a  |
-  \time 4/8 
-  a8 \breathe a16-_ a a a b[( a]) |
+  \override TimeSignature.color = #red \time 5/8 \override TimeSignature.color = #black 
+  \red a4 \black \breathe a16-_ a a a b[( a]) |
   \time 3/8 
   b16 cis cis[( d ]) d8 \breathe |
   \time 7/16 
   d16-_ d d cis cis cis d |
   \time 4/8
   cis4( b8[ a] |
-  b) cis( b4) \breathe |
+  b)  \red cis4. \black \breathe |
   cis4-- cis-- \fermata \bar "|."
   
   
@@ -284,15 +286,14 @@ AltoMusic = \relative c'' {
   cis cis cis cis cis cis |
   \time 7/16
   d d d cis cis cis cis  |
-  \time 4/8 
-  cis8 cis16 cis cis cis d[( cis]) |
+  \override TimeSignature.color = #red \time 5/8 \override TimeSignature.color = #black   \red cis4 \black cis16 cis cis cis d[( cis]) |
   \time 3/8 
   d16 e e[( fis ]) fis8 |
   \time 7/16 
   fis16 fis fis e e e b' |
   \time 4/8
   e,4( gis8[ e] |
-  dis) e( gis4) |
+  dis) \red e4.\black |
   a4 a \fermata \bar "|."
 
 
@@ -335,7 +336,9 @@ TenorMusic =  \relative c' {
   a8.\breathe a16 a a |
   \time 3/8
   b8 a \breathe a16 a  |
-  a a a a a a   |
+  \red
+  gis gis gis gis gis gis   |
+  \black
   a a a8 \breathe a |
   gis8 fis16 gis a b |
   b[( a]) gis fis-> gis fis |
@@ -360,7 +363,7 @@ TenorMusic =  \relative c' {
   \time 4/8
   a a a a b8 b |
   \time 3/8
-  a4 a8 |
+  a4 \breathe a8 |
   \time 5/16
   b16 b b b b  |
   \time 6/16
@@ -403,7 +406,9 @@ TenorMusic =  \relative c' {
 
   \time 6/16
   cis16 cis cis cis cis cis |
-  cis cis cis cis cis cis |
+  \red
+  d d d d d d |
+  \black
   \time 3/8 
   cis8. cis16 cis8 |
   \time 7/16
@@ -417,7 +422,7 @@ TenorMusic =  \relative c' {
   \time 6/16
   fis,16 fis fis fis fis fis |
   \time 4/8 
-  b4 e,4\breathe |
+  b4 \red a4 \black \breathe |
   \time 5/16
   a16 a a a a  |
   \time 6/16
@@ -429,15 +434,15 @@ TenorMusic =  \relative c' {
   a a a a a a |
   \time 7/16
   gis gis gis a a a a   |
-  \time 4/8 
-  a8 \breathe a16 a a a gis[( a]) |
+  \time 5/8 
+  \red a4 \black \breathe a16 a a a gis[( a]) |
   \time 3/8 
   gis16 fis fis[( b ]) b8 \breathe |
   \time 7/16 
   fis16 fis gis a a a b |
   \time 4/8
   a4( gis8[ fis] |
-  gis) e( b'4) \breathe |
+  gis) \red e4.\black \breathe |
   a4 cis, \fermata \bar "|."
   
   
@@ -576,16 +581,16 @@ BassMusic = \relative c {
   a a a a a a |
   \time 7/16
   a a a a a a a  |
-  \time 4/8 
-  a8 a16-_ a a a a8 |
+  \time 5/8 
+  \red  a4 \black a16-_ a a a a8 |
   \time 3/8 
   a16 a a8 a |
   \time 7/16 
   b16-_ b b cis cis cis b |
   \time 4/8
   cis8[( fis,] b8[ a] |
-  cis) cis~ cis4 |
-  a-- a-- \fermata \bar "|."
+  cis) \red cis4.\black |
+  a4-- a-- \fermata \bar "|."
   
   
 }
