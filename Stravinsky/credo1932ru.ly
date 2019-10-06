@@ -77,5 +77,7 @@ noBreakTwoStaves = \noBreak
     >>
    
   >> 
+  \layout{}
+  \midi{}
 }
 
