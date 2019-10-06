@@ -29,7 +29,7 @@ noBreakTwoStaves = \noBreak
   composer = "И. Стравинский"
 }
 
-\include "credo1932ru_notes.ily"
+\include "../credo1932ru_notes.ily"
 
 
 \score {

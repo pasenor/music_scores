@@ -77,7 +77,12 @@ noBreakTwoStaves = \noBreak
     >>
    
   >> 
-  \layout{}
+  \layout{
+   
+    \context { 
+      \Staff 
+      \hide BarLine
+      \remove Time_signature_engraver   }}
   \midi{}
 }
 
