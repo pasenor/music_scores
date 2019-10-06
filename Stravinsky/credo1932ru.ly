@@ -38,6 +38,7 @@ noBreakTwoStaves = \noBreak
     fontSize = #-1.5
     \override StaffSymbol.staff-space = #(magstep -1.5)
     \override Hairpin.to-barline = ##f
+    \override BreathingSign.text = \markup { \musicglyph #"scripts.upbow" }
   }
   <<
     \new Staff

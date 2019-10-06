@@ -1,27 +1,37 @@
+piuFMarkup = \markup { \halign #1.4 \italic "poco piu" \dynamic "f" }
+menoFMarkup = \markup { \halign #1.4 \italic "sub. meno" \dynamic "f" }
+noAccentMarkup = \markup {\italic "no accent"}
+
+
+
 SopranoMusic = \relative c'' {
+  \override TextSpanner.bound-details.left.text = "no accent" 
+  \override TextSpanner.bound-details.right.text =
+    \markup { \draw-line #'(1 . -1) }
+  \override TextSpanner.style = #'line    
   \autoBeamOff
   \clef "treble" \key fis \minor 
   \time 3/8
-  cis8 cis16 cis d d |
+  cis8-_ cis16 cis d d |
   \time 6/16
   d16 d d d d d |
   \time 4/8
-  cis4 cis8 d |
+  cis4 \breathe cis8 d |
   \time 3/8 
-  e16 e e8. e16 |
+  e16 e e8. \breathe e16 |
   e8 d d |
   \time 4/8
-  d d cis4 |
+  d d cis4 \breathe |
   \time 7/16
   cis16 cis cis cis cis cis cis
   \time 4/8
-  b8 gis fis4
+  b8 gis fis4 \breathe
   \time 9/16
   cis'16 cis cis cis cis cis d d d |
   \time 5/16
   d d cis cis cis | 
   \time 4/8
-  cis4 a8 b |
+  cis4 \breathe a8 b |
   a8.[( b16] a8) gis |
   \time 9/16
   fis r16 fis16 fis fis fis8.~ |
@@ -31,16 +41,16 @@ SopranoMusic = \relative c'' {
   fis8. gis16 a8 |
   b a gis |
   \time 6/16 
-  fis8. a16 a a | 
+  fis8. \breathe a16-> a a | 
   \time 3/8
-  a8 a a16 a |
+  a8-_ a-_ \breathe a16-_ a |
   a a a a a a |
-  a a a8 a |
-  b8 cis16 a a a |
-  b8 cis16 cis cis cis |
-  d8 d16 d cis8 |
+  a a a8-_ \breathe a-_ |
+  b8-_ cis16-_ \breathe a-_ a a |
+  b8 cis16-> \breathe cis cis cis |
+  d8 d16 d cis8 \breathe |
   cis16 cis d8 cis16 cis~ |
-  cis4 cis8 |
+  cis4 \breathe cis8-_ |
   cis16 cis cis cis cis cis |
   \time 9/16
   cis cis cis cis cis cis cis cis cis
@@ -53,19 +63,19 @@ SopranoMusic = \relative c'' {
   \time 2/8
   d d d d |
   \time 3/8
-  cis16[( d]) e8 cis |
+  cis16[( d]) e8 cis-_ \breathe|
   
-  cis8 cis16 cis cis cis |
+  cis8-_ cis16 cis cis cis |
   \time 4/8
   cis cis cis cis b8 gis |
   \time 3/8
-  fis4 a8 |
+  fis4 a8 \breathe |
   \time 5/16
   a16 a a a a |
   \time 6/16
   a a a a a a |
   \time 3/8 
-  a8 a a16 a |
+  a8 a \breathe a16 a |
   \time 5/16 
   a a a a a |
   
@@ -76,67 +86,68 @@ SopranoMusic = \relative c'' {
   \time 8/16
   d16 d d d d d d d 
   \time 3/8
-  cis8 d e
+  cis8 d e \breathe
   \time 6/16 
-  e16 e e e e e |
+  e16-_ e e e e e |
   \time 3/8
-  e8 e d |
+  e8-_ e-_ d-_ \breathe |
   \time 4/8
-  e16 e e e e e e e |
+  e16-_ e e e e e e e |
   \time 2/8
-  e8 d |
+  e8-_ d-_ |
   \time 9/16
-  e16 e e e e8 e16 e e |
+  e16-_ e e e e8 e16 e e |
   \time 2/8 
-  e16 e e8 |
+  e16-> e e8 |
   \time 6/16 
-  e16 e e e e e |
+  e16-> e e e e e |
   \time 3/8
-  d[(cis d e ]) e8 |
-  e8 e e |
-  d8. e16 e8 |
-  \time 2/8
-  e8 e16 e |
-  \time 3/8 
-  e8 e4 |
+  d[(cis d e ]) e8 | \break
   
+  e8-\piuFMarkup->  e-> e-> |
+  d8.-> e16 e8 |
+  \time 2/8
+  e8-> e16 e |
+  \time 3/8 
+  e8-> e4-> |
+  \break
   \time 6/16
-  cis16 cis cis cis cis cis |
+  cis16-\menoFMarkup-_ cis cis cis cis cis |
   d d d d d d |
   \time 3/8 
   cis8. cis16 cis8 |
   \time 7/16
-  cis16 cis d d d d d |
+  cis16-_ cis d-_ d d-_ d d |
   \time 3/8
-  cis16 cis8. cis8 |
-  cis16 d e e e e |
+  cis16-_ cis8.-_ cis8 |
+  cis16-_ d e e e e |
   \time 4/8 e e e e d d d d|
   d4 d8 cis |
   \time 6/16
-  cis16 cis cis cis cis cis |
+  cis16\startTextSpan-_ cis cis cis cis cis \stopTextSpan |
   \time 4/8 
-  b8[( gis]) fis4 |
+  b8[( gis]) fis4 \breathe |
   \time 5/16
-  a16 a a a a  |
+  a16\startTextSpan a a a a  |
   \time 6/16
   a a a a a a  |
   \time 3/8
-  a a a a a a  |
-  a8 a4 |
+  a a a a a a \stopTextSpan  |
+  a8 a4 \breathe |
   a16 a a a a a  |
   a a a a a a |
   \time 7/16
-  a a a a a a a  |
+  a-_ a a a a a a  |
   \time 4/8 
-  a8 a16 a a a b[( a]) |
+  a8 \breathe a16-_ a a a b[( a]) |
   \time 3/8 
-  b16 cis cis[( d ]) d8 |
+  b16 cis cis[( d ]) d8 \breathe |
   \time 7/16 
-  d16 d d cis cis cis d |
+  d16-_ d d cis cis cis d |
   \time 4/8
   cis4( b8[ a] |
-  b) cis( b4) |
-  cis4 cis
+  b) cis( b4) \breathe |
+  cis4-- cis-- \fermata \bar "|."
   
   
   
@@ -282,7 +293,7 @@ AltoMusic = \relative c'' {
   \time 4/8
   e,4( gis8[ e] |
   dis) e( gis4) |
-  a4 a
+  a4 a \fermata \bar "|."
 
 
 }
@@ -296,16 +307,16 @@ TenorMusic =  \relative c' {
   \time 6/16
   b b b b b b |
   \time 4/8
-  cis4 a8 b |
+  cis4 \breathe a8 b |
   \time 3/8 
-  cis16 cis cis8. cis16 |
+  cis16 cis cis8. \breathe cis16 |
   cis8 fis, gis   |
   \time 4/8
-  gis16[( a)] b8 cis4 |
+  gis16[( a)] b8 cis4 \breathe |
   \time 7/16
   fis,16 fis fis fis fis fis fis |
   \time 4/8
-  b8 b a4
+  b8 b a4 \breathe |
   \time 9/16
   cis16 cis cis cis cis cis b b b |
   \time 5/16
@@ -321,13 +332,13 @@ TenorMusic =  \relative c' {
   b8. b16 cis8 |
   d16[( cis]) cis8 b |
   \time 6/16 
-  a8. a16 a a |
+  a8.\breathe a16 a a |
   \time 3/8
-  b8 a a16 a  |
+  b8 a \breathe a16 a  |
   a a a a a a   |
-  a a a8 a |
+  a a a8 \breathe a |
   gis8 fis16 gis a b |
-  b[( a]) gis fis gis fis |
+  b[( a]) gis fis-> gis fis |
   b8 gis16 a b8
 
   a16 a a8 gis16 gis~ |
@@ -344,7 +355,7 @@ TenorMusic =  \relative c' {
   \time 2/8
   a a a b |
   \time 3/8
-  cis16[( b]) cis8 b |
+  cis16[( b]) cis8 b \breathe |
   a8 a16 a a a |
   \time 4/8
   a a a a b8 b |
@@ -355,7 +366,7 @@ TenorMusic =  \relative c' {
   \time 6/16
   b b b b b b  |
   \time 3/8 
-  a8 a a16 a |
+  a8 a \breathe a16 a |
   \time 5/16 
   gis gis gis gis gis  |
 
@@ -366,15 +377,15 @@ TenorMusic =  \relative c' {
   \time 8/16
   b16 b b b b b b b |
   \time 3/8
-  cis8 b cis
+  cis8 b cis \breathe
   \time 6/16 
   cis16 cis cis cis cis cis |
   \time 3/8
-  b8 a b |
+  b8 a b \breathe |
   \time 4/8
   cis16 cis cis cis cis cis cis cis |
   \time 2/8
-  d16[( cis]) b8 |
+  d16[(-_ cis]) b8-_ |
   \time 9/16
   a16 a a a a[(  b]) a b cis |
   \time 2/8 
@@ -406,28 +417,28 @@ TenorMusic =  \relative c' {
   \time 6/16
   fis,16 fis fis fis fis fis |
   \time 4/8 
-  b4 e,4 |
+  b4 e,4\breathe |
   \time 5/16
   a16 a a a a  |
   \time 6/16
   a a a a a a  |
   \time 3/8
   b b b b b b  |
-  a8 a4 |
+  a8 a4 \breathe |
   a16 a a a a a  |
   a a a a a a |
   \time 7/16
   gis gis gis a a a a   |
   \time 4/8 
-  a8 a16 a a a gis[( a]) |
+  a8 \breathe a16 a a a gis[( a]) |
   \time 3/8 
-  gis16 fis fis[( b ]) b8 |
+  gis16 fis fis[( b ]) b8 \breathe |
   \time 7/16 
   fis16 fis gis a a a b |
   \time 4/8
   a4( gis8[ fis] |
-  gis) e( b'4) |
-  a4 cis,
+  gis) e( b'4) \breathe |
+  a4 cis, \fermata \bar "|."
   
   
 
@@ -437,7 +448,7 @@ BassMusic = \relative c {
   \autoBeamOff
   \key fis \minor 
   \time 3/8
-  a8 a16 a a a   |
+  a8-_ a16 a a a   |
   \time 6/16
   a a a a a a  |
   \time 4/8
@@ -469,15 +480,15 @@ BassMusic = \relative c {
   \time 6/16
   fis,8. a16 a a |
   \time 3/8
-  a8 a a16 a |
+  a8-_ a-_ a16-_ a |
   a a a a a a 
-  a a a8 a |
-  a a16 a a a |
+  a a a8-_ a-_ |
+  a-_ a16-_ a-_ a a |
   a8 a16 a a a |
   a8 a16 a a8
   
   a16 a b8 cis16 cis~ |
-  cis4 a8 |
+  cis4 a8-_ |
   a16 a a a a a |
   \time 9/16
   a a a a a a a a a
@@ -490,9 +501,9 @@ BassMusic = \relative c {
   \time 2/8
   b b b b |
   \time 3/8
-  a8 a a |
+  a8 a a-_ |
   
-  fis8 fis16 fis fis fis |
+  fis8-_ fis16 fis fis fis |
   \time 4/8
   fis fis fis fis gis8 cis |
   \time 3/8
@@ -517,41 +528,41 @@ BassMusic = \relative c {
   \time 6/16 
   a16 a a a a a 
   \time 3/8
-  a8 a a |
+  a8-_ a-_ a-_ |
   \time 4/8
   a16 a a a a a a a |
   \time 2/8
-  a8 a |
+  a8-_ a-_ |
   \time 9/16
   fis16 fis fis fis fis[(  gis]) fis gis a |
   \time 2/8 
-  b16 b b8 |
+  b16-> b b8 |
   \time 6/16 
-  fis16 fis32[( gis]) fis16 fis gis a  |
+  fis16-> fis32[( gis]) fis16 fis gis a  |
   \time 3/8
   b[(cis b a ]) b8 |
-  cis8 cis cis |
-  b8. a16 a[( b]) |
+  cis8-> cis-> cis-> |
+  b8.-> a16 a[( b]) |
   \time 2/8
-  cis8 cis16 cis |
+  cis8-> cis16 cis |
   \time 3/8 
-  cis8 cis4 |
+  cis8-> cis4-> |
   
   \time 6/16
-  a16 a a a a a  |
+  a16-_ a a a a a  |
   a a a a a a  |
   \time 3/8 
   a8. a16 a8 |
   \time 7/16
-  a16 a a a a a a |
+  a16-_ a a-_ a a-_ a a |
   \time 3/8
-  a16 a8. a8 |
-  a16 a a a a a  |
+  a16-_ a8.-_ a8 |
+  a16-_ a a a a a  |
   \time 4/8 
   a a a a a a a a |
   a4 a8 a |
   \time 6/16
-  a16 a a a a a  |
+  a16-_ a a a a a|
   \time 4/8 
   gis8[( cis]) fis,4 |
   \time 5/16
@@ -566,15 +577,15 @@ BassMusic = \relative c {
   \time 7/16
   a a a a a a a  |
   \time 4/8 
-  a8 a16 a a a a8 |
+  a8 a16-_ a a a a8 |
   \time 3/8 
   a16 a a8 a |
   \time 7/16 
-  b16 b b cis cis cis b |
+  b16-_ b b cis cis cis b |
   \time 4/8
   cis8[( fis,] b8[ a] |
   cis) cis~ cis4 |
-  a a
+  a-- a-- \fermata \bar "|."
   
   
 }
