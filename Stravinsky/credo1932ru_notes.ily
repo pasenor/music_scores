@@ -161,7 +161,7 @@ AltoMusic = \relative c'' {
   \time 6/16
   fis fis fis fis fis fis |
   \time 4/8
-  a4 a8 b |
+  a4 a8 a |
   \time 3/8 
   a16 a a8. a16 |
   a8 fis e  |
