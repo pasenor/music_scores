@@ -1,5 +1,5 @@
-piuFMarkup = \markup { \halign #1.4 \italic "poco piu" \dynamic "f" }
-menoFMarkup = \markup { \halign #1.4 \italic "sub. meno" \dynamic "f" }
+piuFMarkup = \markup { \halign #1.4 \italic "   poco piu" \dynamic "f" }
+menoFMarkup = \markup { \halign #1.4 \italic "   sub. meno" \dynamic "f" }
 noAccentMarkup = \markup {\italic "no accent"}
 
 
@@ -39,7 +39,7 @@ SopranoMusic = \relative c'' {
   fis8 fis fis |
   fis16 fis fis fis fis fis | 
   fis8. gis16 a8 |
-  b a gis |
+   b a gis |
   \time 6/16 
   fis8. \fermata \breathe a16 a a | 
   \time 3/8
@@ -73,7 +73,7 @@ SopranoMusic = \relative c'' {
   \time 5/16
   a16 a a a a |
   \time 6/16
-  a a a a a a |
+  \break a a a a a a |
   \time 3/8 
   a8-- a-- \breathe a16 a |
   \time 5/16 
@@ -82,7 +82,7 @@ SopranoMusic = \relative c'' {
   \time 3/8
   a8[( b]) cis
   \time 2/8
-  cis d 
+   cis d 
   \time 8/16
   d16 d d d d d d d 
   \time 3/8
@@ -128,22 +128,22 @@ SopranoMusic = \relative c'' {
   \time 4/8 
   b8[( gis]) fis4 \breathe |
   \time 5/16
-  a16-_  a\startTextSpan a a a  |
+   a16-_  a\startTextSpan a a a  |
   \time 6/16
   a a a a a a  |
   \time 3/8
   a a a a a a \stopTextSpan  |
   a8 a4 \breathe |
-  a16-_ a a a a a  |
+   a16-_ a a a a a  |
   a a a a a a |
   \time 7/16
   a-_ a a a a a a  |
   \time 4/8 
-  a8 \breathe a16-_ a a a b[( a]) |
+   a8 \breathe a16-_ a a a b[( a]) |
   \time 3/8 
   b16 cis cis[( d ]) d8 \breathe |
   \time 7/16 
-  d16-_ d d cis cis cis d |
+  \break d16-_ d d cis cis cis d |
   \time 4/8
   cis4( b8[ cis] |
   b) cis( b4) \breathe |
@@ -172,7 +172,7 @@ AltoMusic = \relative c'' {
   \time 4/8
   fis8 eis fis4
   \time 9/16
-  a16 a a a a a fis fis fis |
+  \break a16 a a a a a fis fis fis |
   \time 5/16
   fis fis a a a  | 
   \time 4/8
@@ -196,7 +196,7 @@ AltoMusic = \relative c'' {
   fis8 fis16 gis gis8 |
   
   gis16 gis fis8 e16 e~ |
-  e4 a8 |
+  \break e4 a8 |
   a16 a a a a a |
   \time 9/16
   a a a a a a a a a
@@ -399,7 +399,7 @@ TenorMusic =  \relative c' {
   \time 2/8
   d8 cis16 cis |
   \time 3/8 
-  d8 cis4 |
+  cis8 cis4 |
 
   \time 6/16
   cis16 cis cis cis cis cis |
@@ -417,7 +417,7 @@ TenorMusic =  \relative c' {
   \time 6/16
   fis,16 fis fis fis fis fis |
   \time 4/8 
-  b4 e,4\breathe |
+  b4 a4\breathe |
   \time 5/16
   a16 a a a a  |
   \time 6/16
@@ -600,7 +600,7 @@ Credo = \lyricmode {
   рож -- ден -- на, не -- сот -- во -- рен -- на, е -- ди -- но -- сущ -- на От -- цу, Им же вся бы -- ша.
   Нас ра -- ди, че -- ло -- век и на -- ше -- го ра -- ди спа -- се -- ни -- я сшед -- ша -- го "с не" -- бес
   и во -- пло -- тив -- ша -- го -- ся от Ду -- ха Свя -- та и Ма -- ри -- и Де -- вы и во -- че -- ло веч -- ша -- ся.
-  Рас -- пя -- та -- го же за ны при Пон -- тий -- стем Пи -- ла -- те,  и стра -- дав -- ша,  и по -- гре -- бен -- на.
+  Рас -- "пя " -- "та " -- "го " же за ны при Пон -- тий -- стем Пи -- ла -- те,  и стра -- дав -- ша,  и по -- гре -- бен -- на.
   И вос -- крес -- ша -- го "в тре" -- тий день по Пи -- са -- ни -- ем.
   И вос -- шед -- ша -- го на не -- бе са, и се -- дя -- ща о -- дес -- ну -- ю От -- ца, 
   и па -- ки гря -- ду -- ща -- го со сла -- во -- ю, су -- ди -- те жи -- вым  и мер -- твым,

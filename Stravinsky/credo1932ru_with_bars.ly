@@ -82,6 +82,5 @@ noBreakTwoStaves = \noBreak
     \context { 
     }
   }
-  \midi{}
 }
 
