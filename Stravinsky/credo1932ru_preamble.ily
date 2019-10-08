@@ -4,19 +4,29 @@
 
 breakFourStaves = ""
 noBreakTwoStaves = \noBreak
-
+editionNumber = "2019.10.1"
 
 \paper {
   %annotate-spacing = ##t
   oddHeaderMarkup = \markup ""
   evenHeaderMarkup = \markup ""
-  oddFooterMarkup = ""
-  evenFooterMarkup = ""
+  oddFooterMarkup = \markup \fill-line {
+          "" 
+         \fontsize #1.5
+          \fromproperty #'page:page-number-string
+          ""
+      }
+  evenFooterMarkup = \markup \fill-line {
+          "" 
+         \fontsize #1.5
+          \fromproperty #'page:page-number-string
+          ""
+      }
 
   paper-width = 20.99\cm
   paper-height = 29.7\cm
   top-margin = 2.0\cm
-  bottom-margin = 2.0\cm
+  bottom-margin = 1.5\cm
   %  left-margin = 1.49\cm
   %  right-margin = 1.49\cm
   %between-system-space = 2.5\cm
@@ -33,6 +43,10 @@ noBreakTwoStaves = \noBreak
 
 \header {
   title = "Верую"
-  opus = "1932"
+  arranger = "1932"
+  
   composer = "И. Стравинский"
+  dedication = \markup\fill-line{\fontsize #-1.5 \editionNumber " "}
+  meter = "tutto molto metrico, non forte, non espress."
+
 }
