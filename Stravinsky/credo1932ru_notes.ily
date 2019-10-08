@@ -109,7 +109,7 @@ SopranoMusic = \relative c'' {
   \time 2/8
   e8-> e16 e |
   \time 3/8 
-  e8-> e4-> |
+  e8-> e4->\fermata |
   \break
   \time 6/16
   cis16-\menoFMarkup-_ cis cis cis cis cis |
@@ -342,7 +342,7 @@ TenorMusic =  \relative c' {
   b8 gis16 a b8
 
   a16 a a8 gis16 gis~ |
-  gis4 cis8 |
+  gis4 \breathe cis8 |
   cis16 cis cis cis cis cis |
   \time 9/16
   cis cis cis cis cis cis cis cis cis
@@ -515,7 +515,7 @@ BassMusic = \relative c {
   \time 3/8 
   a8-- a-- a16 a |
   \time 5/16 
-  gis gis gis gis gis  |
+  a a a a a  |
   
   \time 3/8
   a4 a8
@@ -546,7 +546,7 @@ BassMusic = \relative c {
   \time 2/8
   cis8-> cis16 cis |
   \time 3/8 
-  cis8-> cis4-> |
+  cis8-> cis4-> \fermata |
   
   \time 6/16
   a16-_ a a a a a  |
