@@ -39,7 +39,7 @@ if __name__ == '__main__':
 
     try:
         lilypond = os.environ['LILYPOND']
-    except KeyError
+    except KeyError:
         lilypond = 'lilypond'
         try_executable('lilypond')
     try:
