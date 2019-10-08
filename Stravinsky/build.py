@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
-import os, sys, subprocess, tempfile
+import os, sys, subprocess
 
 from pydub import AudioSegment, effects
+
 
 def try_executable(name):
     with open(os.devnull) as devnull:
@@ -18,16 +19,10 @@ def ext_iter(root, ext, fun):
             fun(f, r)
 
 
-def compile_ly(file_path, directory):
-    subprocess.call([lilypond, file_path], cwd=directory)
-
-
-def make_mp3(file_path, directory):
-    base_filename = os.path.splitext(file_path)[0] 
-    tmp = tempfile.gettempdir()
-    wav = os.path.join(tmp, base_filename) + '.wav' 
-
-    subprocess.call(['timidity', file_path, '-Ow', '-o', wav], cwd=directory) 
+def make_mp3(filename, directory):
+    base_filename = os.path.splitext(filename)[0] 
+    wav = os.path.join(directory, base_filename) + '.wav' 
+    subprocess.call(['timidity', os.path.join(directory, filename), '-Ow', '-o', wav]) 
 
     mp3 = os.path.join(directory, base_filename) + '.mp3'
     snd = AudioSegment.from_file(wav, 'wav')
@@ -40,18 +35,18 @@ if __name__ == '__main__':
         try_executable('timidity')
     except OSError:
         print('Cannot find timidity')
+        sys.exit(1)
 
     try:
-        try_executable('lilypond')
-    except OSError:
-        try:
-            lilypond = os.environ['LILYPOND']
-            try_executable(lilypond)
-        except (KeyError, OSError):
-            print('Set the LILYPOND env variable to point to the lilypond execptable')
-            sys.exit(1)
-    else:
+        lilypond = os.environ['LILYPOND']
+    except KeyError
         lilypond = 'lilypond'
+        try_executable('lilypond')
+    try:
+        try_executable(lilypond)
+    except OSError:
+        print('Set the LILYPOND env variable to point to the lilypond execptable')
+        sys.exit(1)
 
     print(f'Using lilypond: {lilypond}')
 
@@ -60,4 +55,4 @@ if __name__ == '__main__':
         lambda f, d: subprocess.call([lilypond, f], cwd=d)
     )
     ext_iter('.', '.midi', make_mp3)
-    ext_iter('.', '.wav', lambda f, _: os.remove(f))
+    ext_iter('.', '.wav', lambda f, d: os.remove(os.path.join(d,f)))
