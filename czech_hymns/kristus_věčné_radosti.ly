@@ -4,10 +4,9 @@
 
 \header {
     title = "Kristus věčné radosti"
+    composer = "Václav Miřínský (?), 1522"
 }
-\markup {
-    \vspace #1
-}
+
 
 \paper {
       oddHeaderMarkup = \markup ""
