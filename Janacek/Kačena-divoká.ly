@@ -1,6 +1,6 @@
 \version "2.21.0"
 
-\pointAndClickOn
+\pointAndClickOff
 
 \header {
   title = "Kačena divoká"
@@ -504,113 +504,115 @@ BassMusic = \relative c'{
 
 
 SopranoText = \lyricmode {
-  Ka -- če -- na di -- vo -- ká 
-  le -- tě -- la zvy -- so -- ka, 
-  šo -- haj do -- brý stře -- lec stře -- lil ji -- do bo -- ka, 
-  do bo -- ka le -- vé -- ho, pod pra -- vú no -- žič -- ku.
-  O -- na za -- pla -- ka -- la
-  sed -- ňa na vo -- dič -- ku;
-  hoř -- ko za -- pla -- ka -- la, 
-  na -- Bo -- ha zvo -- la -- la:
-  Ach Bo -- že,  Roz -- bo -- že,
-  už jsem do -- lé -- ta -- la!
+  Ка -- че -- на ди -- во -- ка 
+  лэ -- те -- ла звы -- со -- ка, 
+  шо -- ґай до -- бры стрже -- лэц стржэ -- лил йи -- др бо -- ка.
+  до бо -- ка лэ -- вэ -- ґо, под пра -- ву но -- жич -- ку.
+
+  О -- на за -- пла -- ка -- ла
+  сэд -- ня на во -- дич -- ку;
+  ґорж -- ко за -- пла -- ка -- ла, 
+  на -- Бо -- ґа зво -- ла -- ла:
+  Ах Бо -- же,  Роз -- бо -- же,
+  уж сэм до -- лэ -- та -- ла!
   
-  Už jsem svá ka -- čát -- ka,
-  už jsem do -- cho -- va -- la, 
-  už  jsem svá ka -- čát -- ka,
-  už jsem do -- cho -- va -- la.
+  уж сэм сва ка -- чат -- ка,
+  уж сэм до -- хо -- ва -- ла, 
+  уж сэм, уж сэм сва ка -- чат -- ка
+  до -- хо -- ва -- ла.
   
-  Mo -- je drob -- né dě -- ti
-  ne dě -- la -- jú ško -- dy; 
-  sed -- nú na Du -- na -- ju,
-  kal -- nú vo -- du pi -- jú, 
-  kal -- nú vo -- du pi -- jú, 
-  tvr -- dý pí -- sek je -- dá.
+  Мо -- йе дроб -- нэ де -- ти
+  нэ де -- ла -- йю шко -- ды; 
+  Сэд -- ну на Ду -- на -- йу,
+  кал -- ну во -- ду пи -- йу, 
+  кал -- ну во -- ду пи -- йу, 
+  твыр -- ды пи -- сэк йе -- да.
+
   
-  k_vel -- ké -- mu Du -- na -- ju.
+  к_вэл -- кэ -- му Ду -- на -- йю.
 
 }
 
 AltoText = \lyricmode {
-  Ka -- če -- na di -- vo -- ká 
-  le -- tě -- la zvy -- so -- ka, 
-  šo -- haj do -- brý stře -- lec stře -- lil ji -- do bo -- ka.
-  O -- na za -- pla -- ka -- la
-  sed -- ňa na vo -- dič -- ku;
-  Ach Bo -- že,  Roz -- bo -- že,
-  už jsem do -- lé -- ta -- la!
+  Ка -- че -- на ди -- во -- ка 
+  лэ -- те -- ла звы -- со -- ка, 
+  шо -- ґай до -- бры стрже -- лэц стржэ -- лил йи -- др бо -- ка.
+  О -- на за -- пла -- ка -- ла
+  сэд -- ня на во -- дич -- ку;
+  Ах Бо -- же,  Роз -- бо -- же,
+  уж сэм до -- лэ -- та -- ла!
   
-  Už jsem svá ka -- čát -- ka,
-  už jsem do -- cho -- va -- la, 
-  už  jsem svá ka -- čát -- ka
-  do -- cho -- va -- la.
+  уж сэм сва ка -- чат -- ка,
+  уж сэм до -- хо -- ва -- ла, 
+  уж сэм, сва ка -- чат -- ка
+  до -- хо -- ва -- ла.
 
-  Mo -- je drob -- né dě -- ti
-  ne dě -- la -- jú ško -- dy; 
-  kal -- nú vo -- du pi -- jú, 
-  tvr -- dý pí -- sek je -- dá.
+  Мо -- йе дроб -- нэ де -- ти
+  нэ де -- ла -- йю шко -- ды; 
+  кал -- ну во -- ду пи -- йу, 
+  твыр -- ды пи -- сэк йе -- да.
 
-  Šak my po -- le tí -- me
-  k_vel -- ké -- mu Du -- na -- ju.
+  Шак мы по -- лэ ти -- мэ
+  к_вэл -- кэ -- му Ду -- на -- йю.
 
 }
 
 
 TenorText = \lyricmode {
-  Ka -- če -- na di -- vo -- ká 
-  le -- tě -- la zvy -- so -- ka, 
-  šo -- haj do -- brý stře -- lec stře -- lil ji -- do bo -- ka.
-  O -- na za -- pla -- ka -- la
-  sed -- ňa na vo -- dič -- ku;
-  Ach Bo -- že,  Roz -- bo -- že,
-  už jsem do -- lé -- ta -- la!
-  U -- bo -- há ka -- či -- ca, 
-  už jsem do -- lé -- ta -- la,
-  už jsem svá ka -- čát -- ka,
-  už jsem do -- cho -- va -- la, 
-  už  jsem, už jsem svá ka -- čát -- ka
-  do -- cho -- va -- la.
+  Ка -- че -- на ди -- во -- ка 
+  лэ -- те -- ла звы -- со -- ка, 
+  шо -- ґай до -- бры стрже -- лэц стржэ -- лил йи -- др бо -- ка.
+  О -- на за -- пла -- ка -- ла
+  сэд -- ня на во -- дич -- ку;
+  Ах Бо -- же,  Роз -- бо -- же,
+  уж сэм до -- лэ -- та -- ла!
+  У -- бо -- ґа ка -- чи -- ца, 
+  уж сэм до -- лэ -- та -- ла,
+  уж сэм сва ка -- чат -- ка,
+  уж сэм до -- хо -- ва -- ла, 
+  уж сэм, уж сэм сва ка -- чат -- ка
+  до -- хо -- ва -- ла.
   
-  Mo -- je drob -- né dě -- ti
-  ne dě -- la -- jú ško -- dy; 
-  kal -- nú vo -- du pi -- jú, 
-  tvr -- dý pí -- sek je -- dá.
+  Мо -- йе дроб -- нэ де -- ти
+  нэ де -- ла -- йю шко -- ды; 
+  кал -- ну во -- ду пи -- йу, 
+  твыр -- ды пи -- сэк йе -- да.
   
-  Vy drob -- ná ká -- čát -- ka,
-  po -- let' -- te vy za mnou! 
-  Šak my po -- le tí -- me
-  k_vel -- ké -- mu Du -- na -- ju.
+  Вы дроб -- на ка -- чат -- ка,
+  по -- лэть -- тэ вы за мноу! 
+  Шак мы по -- лэ ти -- мэ
+  к_вэл -- кэ -- му Ду -- на -- йю.
   
 }
 
 BaritoneText = \lyricmode {
-  U -- bo -- há ka -- či -- ca,
-  uz jsem do -- lé ta -- la,
+  У -- бо -- ґа ка -- чи -- ца, 
+  уж сэм до -- лэ -- та -- ла,
 }
 
 BassText = \lyricmode {
-  Ka -- če -- na di -- vo -- ká 
-  le -- tě -- la zvy -- so -- ka, 
-  šo -- haj do -- brý stře -- lec stře -- lil ji -- do bo -- ka.
-  O -- na za -- pla -- ka -- la
-  sed -- ňa na vo -- dič -- ku;
-  Ach Bo -- že,  Roz -- bo -- že,
-  už jsem do -- lé -- ta -- la!
-  U -- bo -- há ka -- či -- ca, 
-  už jsem do -- lé -- ta -- la,
-  už jsem svá ka -- čát -- ka,
-  do -- cho -- va -- la,
-  už  jsem, už jsem svá ka -- čát -- ka
-  do -- cho -- va -- la.
+  Ка -- че -- на ди -- во -- ка 
+  лэ -- те -- ла звы -- со -- ка, 
+  шо -- ґай до -- бры стрже -- лэц стржэ -- лил йи -- др бо -- ка.
+  О -- на за -- пла -- ка -- ла
+  сэд -- ня на во -- дич -- ку;
+  Ах Бо -- же,  Роз -- бо -- же,
+  уж сэм до -- лэ -- та -- ла!
+  У -- бо -- ґа ка -- чи -- ца, 
+  уж сэм до -- лэ -- та -- ла,
+  уж сэм сва ка -- чат -- ка,
+  до -- хо -- ва -- ла, 
+  уж сем, уж сэм сва ка -- чат -- ка
+  до -- хо -- ва -- ла.
 
-  Mo -- je drob -- né dě -- ti
-  ne dě -- la -- jú ško -- dy; 
-  kal -- nú vo -- du pi -- jú, 
-  tvr -- dý pí -- sek je -- dá.
+  Мо -- йе дроб -- нэ де -- ти
+  нэ де -- ла -- йю шко -- ды; 
+  кал -- ну во -- ду пи -- йу, 
+  твыр -- ды пи -- сэк йе -- да.
   
-  po -- let' -- te vy za mnou! 
-  Šak my po -- le tí -- me
-  k vel -- ké -- mu Du -- na -- ju.
+  по -- лэть -- тэ вы за мноу! 
+  Шак мы по -- лэ ти -- мэ
+  к_вэл -- кэ -- му Ду -- на -- йю.
 
 }
 
