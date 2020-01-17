@@ -267,7 +267,7 @@ TenorMusic = \relative c'{
   R2 | c4\< c | c\> c | c c
   R2 | c4\< c | c\> c | c c
   bes\< bes | 
-  bes\> a |
+  bes\> aes |
   g\!( ees') |
   ees4.( c8) |
   bes4\< bes | 
